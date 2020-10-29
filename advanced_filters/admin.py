@@ -39,7 +39,7 @@ class AdvancedListFilters(admin.SimpleListFilter):
                 return queryset
             query = advfilter.query
             logger.debug(query.__dict__)
-            return queryset.filter(query).distinct()
+            return queryset.filter(query)
         return queryset
 
 
